@@ -18,7 +18,7 @@ public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    //Definimos mas validaciones como el tamaño max y min
     @NotEmpty(message = "El número de documento no puede ser vacío")
     @Size( min = 8 , max = 8, message = "El tamaño del número de documento es 8")
     @Column(name = "number_id" , unique = true ,length = 8, nullable = false)
@@ -31,7 +31,7 @@ public class Customer implements Serializable {
     @NotEmpty(message = "El apellido no puede ser vacío")
     @Column(name="last_name", nullable=false)
     private String lastName;
-
+    //Validacion de Email formato
     @NotEmpty(message = "el correo no puede estar vacío")
     @Email(message = "no es un dirección de correo bien formada")
     @Column(unique=true, nullable=false)
