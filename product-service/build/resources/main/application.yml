@@ -44,7 +44,7 @@ jpa:
     hibernate:
       show_sql: true
       use_sql_comments: false
-      format_sql: true
+      format_sql: false
 # Como se escribe nuestro log
 logging:
   pattern:
