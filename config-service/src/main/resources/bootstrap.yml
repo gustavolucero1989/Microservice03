@@ -10,9 +10,9 @@ spring:
       server:
         git:
           uri: https://github.com/gustavolucero1989/Microservice03/tree/Config
-            searchPaths: config-data
-            username: ${GIT_USER}
-            password: ${GIT_PASSWORD}
+          searchPaths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
   security:
     user:
       name: root
