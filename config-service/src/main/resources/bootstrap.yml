@@ -1,0 +1,19 @@
+server:
+  port: 8081
+//Vamos a mapeardonde se encuentran nuestro archivos de configuracion
+//de cada uno de nuestros microservicios para exponer esas configuraciones
+//a traves de una api REst... Esp lo hacemos en nuestro repositorio
+//Ahora vamos a configurar la ruta donde estas las configuraciones de nuestros microservicios
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gustavolucero1989/Microservice03/tree/Config
+            searchPaths: config-data
+            username: ${GIT_USER}
+            password: ${GIT_PASSWORD}
+  security:
+    user:
+      name: root
+      password: s3cr3t
